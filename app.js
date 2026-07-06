@@ -48,11 +48,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Upload Folder Access
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// CORS
-app.use(cors({
-  origin: "https://devangecom.netlify.app",
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "https://devangecom.netlify.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Session Middleware
 app.use(
