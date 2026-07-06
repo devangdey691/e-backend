@@ -50,7 +50,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // CORS
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://devangecom.netlify.app",
   credentials: true
 }));
 
