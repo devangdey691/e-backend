@@ -36,7 +36,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // View Engine Setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // Middlewares
 app.use(logger('dev'));
